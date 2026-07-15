@@ -3,3 +3,5 @@ debug_images/
 __pycache__/
 
 logs/
+
+venv/
