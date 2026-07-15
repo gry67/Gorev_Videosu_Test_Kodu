@@ -227,17 +227,27 @@ class MissionController:
         self._transition_to(MissionState.SEARCH)
 
 
+
+
+
+
+
+
+
+
+
     def _handle_search(self):
         """
-        SEARCH: Belirli bir süre boyunca görüntü işleme ile hedef arama.
+        SEARCH: Görüntü işleme ile hedef arama.
 
-        SEARCH süresi boyunca tespitler belirli aralıklarla kaydedilir.
-        Süre tamamlandığında yeterli mavi ve kırmızı örnek varsa PROCESS
-        aşamasına geçilir ve hedef konumları tüm örneklerden hesaplanır.
+        Süre kısıtlaması kaldırıldı. İHA zaten Mission Planner üzerinden
+        AUTO modda rotasını geziyor. Sistem sadece kamerayı izler,
+        hem mavi hem de kırmızı hedefler için yeterli örnek (minimum_detection_samples)
+        toplandığı anda direkt PROCESS aşamasına geçer.
         """
         now = time.time()
 
-        # Yeni SEARCH penceresini başlat.
+        # İlk kez SEARCH'e girildiğinde buffer'ları temizle ve başlangıç ayarlarını yap
         if not self._search_window_started:
             self._search_window_started = True
             self.state_start_time = now
@@ -246,21 +256,17 @@ class MissionController:
             self._red_detections_buffer.clear()
 
             logger.info("=" * 50)
-            logger.info("DURUM: SEARCH - Süreli Hedef Arama")
+            logger.info("DURUM: SEARCH - Süresiz Serbest Hedef Arama")
             logger.info("=" * 50)
             logger.info(
-                f"Arama süresi: {self.search_duration:.1f}s, "
-                f"örnekleme aralığı: {self.detection_sample_interval:.2f}s, "
-                f"minimum örnek: {self.minimum_detection_samples}"
+                f"Örnekleme aralığı: {self.detection_sample_interval:.2f}s, "
+                f"Minimum örnek sayısı: {self.minimum_detection_samples}"
             )
 
-        search_elapsed = now - self.state_start_time
-
-        # Belirlenen örnekleme aralığı dolmadıysa yeni kare işleme.
+        # Belirlenen örnekleme aralığı dolmadıysa yeni kare işlemeye gerek yok
         if (
             self._last_detection_sample_time > 0.0
-            and now - self._last_detection_sample_time
-            < self.detection_sample_interval
+            and now - self._last_detection_sample_time < self.detection_sample_interval
         ):
             return
 
@@ -271,7 +277,6 @@ class MissionController:
             frame = self.vision.capture_frame()
         else:
             # Test modu: sentetik kare
-            
             frame = np.zeros((480, 640, 3), dtype=np.uint8)
 
         if frame is None:
@@ -328,49 +333,42 @@ class MissionController:
             annotated = self.vision.draw_detections(frame, detections)
             self.vision.save_debug_image(annotated, "search")
 
-        # SEARCH süresi henüz tamamlanmadıysa toplamaya devam et.
-        if search_elapsed < self.search_duration:
-            if int(search_elapsed) != int(
-                max(0.0, search_elapsed - self.detection_sample_interval)
-            ):
-                logger.info(
-                    f"Arama devam ediyor: {search_elapsed:.0f}/"
-                    f"{self.search_duration:.0f}s | "
-                    f"Mavi={len(self._blue_detections_buffer)}, "
-                    f"Kırmızı={len(self._red_detections_buffer)}"
-                )
-            return
-
+        # Toplanan örnek sayıları
         blue_count = len(self._blue_detections_buffer)
         red_count = len(self._red_detections_buffer)
 
+        # Yeterli sayıya ulaşıldı mı?
         blue_ready = blue_count >= self.minimum_detection_samples
         red_ready = red_count >= self.minimum_detection_samples
 
-        logger.info(
-            f"SEARCH süresi tamamlandı: "
-            f"Mavi={blue_count}, Kırmızı={red_count}"
-        )
-
+        # İkisi de yeterliyse süreyi beklemeden direkt fırla
         if blue_ready and red_ready:
+            logger.info("=" * 50)
             logger.info(
-                "✓ Her iki renk için yeterli örnek toplandı, "
-                "işleme geçiliyor"
+                f"✓ HEDEFLER BULUNDU! Mavi={blue_count}/{self.minimum_detection_samples}, "
+                f"Kırmızı={red_count}/{self.minimum_detection_samples}"
             )
+            logger.info("Arama tamamlandı, işleme (PROCESS) geçiliyor.")
+            logger.info("=" * 50)
+            
             self._search_window_started = False
             self._transition_to(MissionState.PROCESS)
-            return
+        else:
+            # Çok fazla log spamı yapmamak için 5 saniyede bir durumu bildir
+            if int(now) % 5 == 0 and int(now) != int(now - self.detection_sample_interval):
+                logger.info(
+                    f"Arama sürüyor... Eksik tespitler -> "
+                    f"Mavi: {blue_count}/{self.minimum_detection_samples} | "
+                    f"Kırmızı: {red_count}/{self.minimum_detection_samples}"
+                )
 
-        logger.warning(
-            "Yeterli tespit toplanamadı. "
-            f"Gerekli minimum={self.minimum_detection_samples}, "
-            f"Mavi={blue_count}, Kırmızı={red_count}. "
-            "Yeni SEARCH penceresi başlatılıyor."
-        )
 
-        # Yeni süreli arama penceresi için sıfırla.
-        self._search_window_started = False
-        self.state_start_time = None
+
+
+
+
+
+
 
 
 
@@ -442,6 +440,11 @@ class MissionController:
 
         logger.info("✓ Misyon yüklendi, mavi hedeflere yönleniliyor")
         self._transition_to(MissionState.NAVIGATE_BLUE)
+
+
+
+
+        
 
     def _handle_navigate_blue(self):
         """

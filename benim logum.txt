@@ -1,0 +1,239 @@
+2026-07-14 21:11:46 [INFO] vision: VisionProcessor başlatıldı - minAreaRect etkin
+2026-07-14 21:11:46 [INFO] coordinate_transform: CoordinateTransformer başlatıldı
+2026-07-14 21:11:46 [INFO] coordinate_transform:   Kamera matrisi:
+[[554.25   0.   320.  ]
+ [  0.   554.25 240.  ]
+ [  0.     0.     1.  ]]
+2026-07-14 21:11:46 [INFO] navigation: NavigationManager başlatıldı
+2026-07-14 21:11:46 [INFO] payload: PayloadManager başlatıldı - Servo Kanal: 9, Nötr: 1500µs
+2026-07-14 21:11:46 [INFO] mission: ============================================================
+2026-07-14 21:11:46 [INFO] mission: TEKNOFEST İHA GÖREV SİSTEMİ BAŞLATILDI
+2026-07-14 21:11:46 [INFO] mission: ============================================================
+2026-07-14 21:11:46 [INFO] mission:   SITL Modu: True
+2026-07-14 21:11:46 [INFO] mission:   Kamera: True
+2026-07-14 21:11:46 [INFO] mission: Görev döngüsü başlatılıyor...
+2026-07-14 21:11:46 [INFO] mission: ==================================================
+2026-07-14 21:11:46 [INFO] mission: DURUM: INIT - Sistem Başlatılıyor
+2026-07-14 21:11:46 [INFO] mission: ==================================================
+2026-07-14 21:11:46 [INFO] navigation: Bağlanılıyor: udp:0.0.0.0:14550 (baud=57600)...
+2026-07-14 21:11:48 [INFO] navigation: ✓ Bağlantı başarılı!
+INFO:navigation:✓ Bağlantı başarılı!
+2026-07-14 21:11:48 [INFO] navigation: --- Araç Bilgileri ---
+INFO:navigation:--- Araç Bilgileri ---
+2026-07-14 21:11:48 [INFO] navigation:   Firmware: APM:Plane-None.None.NoneUnknownReleaseType
+INFO:navigation:  Firmware: APM:Plane-None.None.NoneUnknownReleaseType
+2026-07-14 21:11:48 [INFO] navigation:   GPS: GPSInfo:fix=6,num_sat=10
+INFO:navigation:  GPS: GPSInfo:fix=6,num_sat=10
+2026-07-14 21:11:48 [INFO] navigation:   Batarya: Battery:voltage=12.6,current=0.0,level=99
+INFO:navigation:  Batarya: Battery:voltage=12.6,current=0.0,level=99
+2026-07-14 21:11:48 [INFO] navigation:   Mod: AUTO
+INFO:navigation:  Mod: AUTO
+2026-07-14 21:11:48 [INFO] navigation:   Armed: True
+INFO:navigation:  Armed: True
+2026-07-14 21:11:48 [INFO] navigation:   Sistem durumu: STANDBY
+INFO:navigation:  Sistem durumu: STANDBY
+2026-07-14 21:11:48 [INFO] payload: Vehicle bağlantısı ayarlandı
+INFO:payload:Vehicle bağlantısı ayarlandı
+2026-07-14 21:11:48 [INFO] mission: ✓ GPS fix: 6
+INFO:mission:✓ GPS fix: 6
+2026-07-14 21:11:50 [INFO] vision: USB kamera başlatıldı
+INFO:vision:USB kamera başlatıldı
+2026-07-14 21:11:50 [INFO] mission: ✓ Kamera başlatıldı
+INFO:mission:✓ Kamera başlatıldı
+2026-07-14 21:11:50 [INFO] payload: Servo nötr pozisyona getiriliyor...
+INFO:payload:Servo nötr pozisyona getiriliyor...
+2026-07-14 21:11:50 [INFO] payload: Servo komutu gönderildi: Kanal=9, PWM=1500µs
+INFO:payload:Servo komutu gönderildi: Kanal=9, PWM=1500µs
+2026-07-14 21:11:50 [INFO] payload: Servo nötr pozisyonda
+INFO:payload:Servo nötr pozisyonda
+2026-07-14 21:11:50 [INFO] mission: ✓ Servo nötr pozisyonda
+INFO:mission:✓ Servo nötr pozisyonda
+2026-07-14 21:11:50 [INFO] mission: ✓ Batarya: 12.6V, Seviye: 99%
+INFO:mission:✓ Batarya: 12.6V, Seviye: 99%
+2026-07-14 21:11:50 [INFO] mission: ✓ Tüm sistemler hazır
+INFO:mission:✓ Tüm sistemler hazır
+2026-07-14 21:11:50 [INFO] mission: DURUM GEÇİŞİ: INIT → SEARCH
+INFO:mission:DURUM GEÇİŞİ: INIT → SEARCH
+2026-07-14 21:11:50 [INFO] mission: ==================================================
+INFO:mission:==================================================
+2026-07-14 21:11:50 [INFO] mission: DURUM: SEARCH - Süresiz Serbest Hedef Arama
+INFO:mission:DURUM: SEARCH - Süresiz Serbest Hedef Arama
+2026-07-14 21:11:50 [INFO] mission: ==================================================
+INFO:mission:==================================================
+2026-07-14 21:11:50 [INFO] mission: Örnekleme aralığı: 0.20s, Minimum örnek sayısı: 15
+INFO:mission:Örnekleme aralığı: 0.20s, Minimum örnek sayısı: 15
+2026-07-14 21:14:52 [INFO] mission: KIRMIZI tespit #17: GPS=(-35.363262, 149.165237), Güven=89.8%
+INFO:mission:KIRMIZI tespit #17: GPS=(-35.363262, 149.165237), Güven=89.8%
+2026-07-14 21:14:52 [INFO] mission: KIRMIZI tespit #18: GPS=(-35.363262, 149.165237), Güven=90.8%
+INFO:mission:KIRMIZI tespit #18: GPS=(-35.363262, 149.165237), Güven=90.8%
+2026-07-14 21:14:52 [INFO] mission: MAVİ tespit #10: GPS=(-35.363262, 149.165237), Güven=77.2%
+INFO:mission:MAVİ tespit #10: GPS=(-35.363262, 149.165237), Güven=77.2%
+2026-07-14 21:14:52 [INFO] mission: KIRMIZI tespit #19: GPS=(-35.363262, 149.165237), Güven=91.4%
+INFO:mission:KIRMIZI tespit #19: GPS=(-35.363262, 149.165237), Güven=91.4%
+2026-07-14 21:14:52 [INFO] mission: MAVİ tespit #11: GPS=(-35.363262, 149.165237), Güven=82.1%
+INFO:mission:MAVİ tespit #11: GPS=(-35.363262, 149.165237), Güven=82.1%
+2026-07-14 21:14:52 [INFO] mission: KIRMIZI tespit #20: GPS=(-35.363262, 149.165237), Güven=92.2%
+INFO:mission:KIRMIZI tespit #20: GPS=(-35.363262, 149.165237), Güven=92.2%
+2026-07-14 21:14:52 [INFO] mission: MAVİ tespit #12: GPS=(-35.363262, 149.165237), Güven=82.6%
+INFO:mission:MAVİ tespit #12: GPS=(-35.363262, 149.165237), Güven=82.6%
+2026-07-14 21:14:52 [INFO] mission: KIRMIZI tespit #21: GPS=(-35.363262, 149.165237), Güven=93.4%
+INFO:mission:KIRMIZI tespit #21: GPS=(-35.363262, 149.165237), Güven=93.4%
+2026-07-14 21:14:53 [INFO] mission: MAVİ tespit #13: GPS=(-35.363262, 149.165237), Güven=85.1%
+INFO:mission:MAVİ tespit #13: GPS=(-35.363262, 149.165237), Güven=85.1%
+2026-07-14 21:14:53 [INFO] mission: KIRMIZI tespit #22: GPS=(-35.363262, 149.165237), Güven=93.4%
+INFO:mission:KIRMIZI tespit #22: GPS=(-35.363262, 149.165237), Güven=93.4%
+2026-07-14 21:14:53 [INFO] mission: MAVİ tespit #14: GPS=(-35.363262, 149.165237), Güven=84.3%
+INFO:mission:MAVİ tespit #14: GPS=(-35.363262, 149.165237), Güven=84.3%
+2026-07-14 21:14:53 [INFO] mission: KIRMIZI tespit #23: GPS=(-35.363262, 149.165237), Güven=92.4%
+INFO:mission:KIRMIZI tespit #23: GPS=(-35.363262, 149.165237), Güven=92.4%
+2026-07-14 21:14:53 [INFO] mission: MAVİ tespit #15: GPS=(-35.363262, 149.165237), Güven=83.2%
+INFO:mission:MAVİ tespit #15: GPS=(-35.363262, 149.165237), Güven=83.2%
+2026-07-14 21:14:53 [INFO] mission: KIRMIZI tespit #24: GPS=(-35.363262, 149.165237), Güven=91.9%
+INFO:mission:KIRMIZI tespit #24: GPS=(-35.363262, 149.165237), Güven=91.9%
+2026-07-14 21:14:53 [INFO] mission: ==================================================
+INFO:mission:==================================================
+2026-07-14 21:14:53 [INFO] mission: ✓ HEDEFLER BULUNDU! Mavi=15/15, Kırmızı=24/15
+INFO:mission:✓ HEDEFLER BULUNDU! Mavi=15/15, Kırmızı=24/15
+2026-07-14 21:14:53 [INFO] mission: Arama tamamlandı, işleme (PROCESS) geçiliyor.
+INFO:mission:Arama tamamlandı, işleme (PROCESS) geçiliyor.
+2026-07-14 21:14:53 [INFO] mission: ==================================================
+INFO:mission:==================================================
+2026-07-14 21:14:53 [INFO] mission: DURUM GEÇİŞİ: SEARCH → PROCESS
+INFO:mission:DURUM GEÇİŞİ: SEARCH → PROCESS
+2026-07-14 21:14:53 [INFO] mission: ==================================================
+INFO:mission:==================================================
+2026-07-14 21:14:53 [INFO] mission: DURUM: PROCESS - Tespitler Değerlendiriliyor
+INFO:mission:DURUM: PROCESS - Tespitler Değerlendiriliyor
+2026-07-14 21:14:53 [INFO] mission: ==================================================
+INFO:mission:==================================================
+2026-07-14 21:14:53 [INFO] mission: MAVİ hedef GPS (ortalamalı): (-35.363262, 149.165237)
+INFO:mission:MAVİ hedef GPS (ortalamalı): (-35.363262, 149.165237)
+2026-07-14 21:14:53 [INFO] mission: KIRMIZI hedef GPS (ortalamalı): (-35.363262, 149.165237)
+INFO:mission:KIRMIZI hedef GPS (ortalamalı): (-35.363262, 149.165237)
+2026-07-14 21:14:53 [INFO] mission: Yük bırakma misyonu oluşturuluyor...
+INFO:mission:Yük bırakma misyonu oluşturuluyor...
+2026-07-14 21:14:53 [INFO] navigation: ==================================================
+INFO:navigation:==================================================
+2026-07-14 21:14:53 [INFO] navigation: MİSYON OLUŞTURULUYOR
+INFO:navigation:MİSYON OLUŞTURULUYOR
+2026-07-14 21:14:53 [INFO] navigation: ==================================================
+INFO:navigation:==================================================
+2026-07-14 21:14:53 [INFO] navigation:   [WP 0] Kalkış → 50m
+INFO:navigation:  [WP 0] Kalkış → 50m
+2026-07-14 21:14:53 [INFO] navigation:   [WP 1] MAVİ Hedef 1 → (-35.363262, 149.165237) @ 30m
+INFO:navigation:  [WP 1] MAVİ Hedef 1 → (-35.363262, 149.165237) @ 30m
+2026-07-14 21:14:53 [INFO] navigation:   [WP 2] SERVO → Yük 1 Bırak (Kanal=9, PWM=1100)
+INFO:navigation:  [WP 2] SERVO → Yük 1 Bırak (Kanal=9, PWM=1100)
+2026-07-14 21:14:53 [INFO] navigation:   [WP 3] KIRMIZI Hedef 1 → (-35.363262, 149.165237) @ 30m
+INFO:navigation:  [WP 3] KIRMIZI Hedef 1 → (-35.363262, 149.165237) @ 30m
+2026-07-14 21:14:53 [INFO] navigation:   [WP 4] SERVO → Yük 2 Bırak (Kanal=9, PWM=1900)
+INFO:navigation:  [WP 4] SERVO → Yük 2 Bırak (Kanal=9, PWM=1900)
+2026-07-14 21:14:53 [INFO] navigation:   [WP 5] RTL (Eve Dönüş)
+INFO:navigation:  [WP 5] RTL (Eve Dönüş)
+2026-07-14 21:14:53 [INFO] navigation: 
+Toplam 6 komut yükleniyor...
+INFO:navigation:
+Toplam 6 komut yükleniyor...
+WARNING:autopilot:got MISSION_ITEM; GCS should send MISSION_ITEM_INT
+2026-07-14 21:14:53 [INFO] navigation: ✓ Misyon başarıyla yüklendi!
+INFO:navigation:✓ Misyon başarıyla yüklendi!
+2026-07-14 21:14:53 [INFO] navigation: Uçuş modu değiştiriliyor: AUTO
+INFO:navigation:Uçuş modu değiştiriliyor: AUTO
+2026-07-14 21:14:53 [INFO] navigation: ✓ Uçuş modu: AUTO
+INFO:navigation:✓ Uçuş modu: AUTO
+2026-07-14 21:14:53 [INFO] mission: ✓ Misyon yüklendi, mavi hedeflere yönleniliyor
+INFO:mission:✓ Misyon yüklendi, mavi hedeflere yönleniliyor
+2026-07-14 21:14:53 [INFO] mission: DURUM GEÇİŞİ: PROCESS → NAVIGATE_BLUE
+INFO:mission:DURUM GEÇİŞİ: PROCESS → NAVIGATE_BLUE
+2026-07-14 21:14:53 [INFO] mission: ✓ Mavi hedefe ulaşıldı! Mesafe: 0.0m
+INFO:mission:✓ Mavi hedefe ulaşıldı! Mesafe: 0.0m
+2026-07-14 21:14:53 [INFO] mission: DURUM GEÇİŞİ: NAVIGATE_BLUE → DROP_BLUE
+INFO:mission:DURUM GEÇİŞİ: NAVIGATE_BLUE → DROP_BLUE
+2026-07-14 21:14:54 [INFO] mission: ==================================================
+INFO:mission:==================================================
+2026-07-14 21:14:54 [INFO] mission: DURUM: DROP_BLUE - Yük 1 Bırakılıyor
+INFO:mission:DURUM: DROP_BLUE - Yük 1 Bırakılıyor
+2026-07-14 21:14:54 [INFO] mission: ==================================================
+INFO:mission:==================================================
+2026-07-14 21:14:54 [INFO] payload: ========================================
+INFO:payload:========================================
+2026-07-14 21:14:54 [INFO] payload: YÜK 1 BIRAKILIYOR (Mavi Bölge)
+INFO:payload:YÜK 1 BIRAKILIYOR (Mavi Bölge)
+2026-07-14 21:14:54 [INFO] payload: ========================================
+INFO:payload:========================================
+2026-07-14 21:14:54 [INFO] payload: Servo komutu gönderildi: Kanal=9, PWM=1100µs
+INFO:payload:Servo komutu gönderildi: Kanal=9, PWM=1100µs
+2026-07-14 21:14:54 [INFO] payload: Servo hareketi bekleniyor (2.0s)...
+INFO:payload:Servo hareketi bekleniyor (2.0s)...
+2026-07-14 21:14:56 [INFO] payload: ✓ Yük 1 başarıyla bırakıldı!
+INFO:payload:✓ Yük 1 başarıyla bırakıldı!
+2026-07-14 21:14:56 [INFO] payload: Servo nötr pozisyona getiriliyor...
+INFO:payload:Servo nötr pozisyona getiriliyor...
+2026-07-14 21:14:56 [INFO] payload: Servo komutu gönderildi: Kanal=9, PWM=1500µs
+INFO:payload:Servo komutu gönderildi: Kanal=9, PWM=1500µs
+2026-07-14 21:14:56 [INFO] payload: Servo nötr pozisyonda
+INFO:payload:Servo nötr pozisyonda
+2026-07-14 21:14:56 [INFO] mission: ✓ Yük 1 başarıyla bırakıldı!
+INFO:mission:✓ Yük 1 başarıyla bırakıldı!
+2026-07-14 21:14:56 [INFO] mission: DURUM GEÇİŞİ: DROP_BLUE → NAVIGATE_RED
+INFO:mission:DURUM GEÇİŞİ: DROP_BLUE → NAVIGATE_RED
+2026-07-14 21:14:56 [INFO] mission: ✓ Kırmızı hedefe ulaşıldı! Mesafe: 0.0m
+INFO:mission:✓ Kırmızı hedefe ulaşıldı! Mesafe: 0.0m
+2026-07-14 21:14:56 [INFO] mission: DURUM GEÇİŞİ: NAVIGATE_RED → DROP_RED
+INFO:mission:DURUM GEÇİŞİ: NAVIGATE_RED → DROP_RED
+2026-07-14 21:14:56 [INFO] mission: ==================================================
+INFO:mission:==================================================
+2026-07-14 21:14:56 [INFO] mission: DURUM: DROP_RED - Yük 2 Bırakılıyor
+INFO:mission:DURUM: DROP_RED - Yük 2 Bırakılıyor
+2026-07-14 21:14:56 [INFO] mission: ==================================================
+INFO:mission:==================================================
+2026-07-14 21:14:56 [INFO] payload: ========================================
+INFO:payload:========================================
+2026-07-14 21:14:56 [INFO] payload: YÜK 2 BIRAKILIYOR (Kırmızı Bölge)
+INFO:payload:YÜK 2 BIRAKILIYOR (Kırmızı Bölge)
+2026-07-14 21:14:56 [INFO] payload: ========================================
+INFO:payload:========================================
+2026-07-14 21:14:56 [INFO] payload: Servo komutu gönderildi: Kanal=9, PWM=1900µs
+INFO:payload:Servo komutu gönderildi: Kanal=9, PWM=1900µs
+2026-07-14 21:14:56 [INFO] payload: Servo hareketi bekleniyor (2.0s)...
+INFO:payload:Servo hareketi bekleniyor (2.0s)...
+2026-07-14 21:14:58 [INFO] payload: ✓ Yük 2 başarıyla bırakıldı!
+INFO:payload:✓ Yük 2 başarıyla bırakıldı!
+2026-07-14 21:14:58 [INFO] payload: Servo nötr pozisyona getiriliyor...
+INFO:payload:Servo nötr pozisyona getiriliyor...
+2026-07-14 21:14:58 [INFO] payload: Servo komutu gönderildi: Kanal=9, PWM=1500µs
+INFO:payload:Servo komutu gönderildi: Kanal=9, PWM=1500µs
+2026-07-14 21:14:58 [INFO] payload: Servo nötr pozisyonda
+INFO:payload:Servo nötr pozisyonda
+2026-07-14 21:14:59 [INFO] mission: ✓ Yük 2 başarıyla bırakıldı!
+INFO:mission:✓ Yük 2 başarıyla bırakıldı!
+2026-07-14 21:14:59 [INFO] mission: DURUM GEÇİŞİ: DROP_RED → RTL
+INFO:mission:DURUM GEÇİŞİ: DROP_RED → RTL
+2026-07-14 21:14:59 [INFO] mission: ==================================================
+INFO:mission:==================================================
+2026-07-14 21:14:59 [INFO] mission: DURUM: RTL - Eve Dönüş
+INFO:mission:DURUM: RTL - Eve Dönüş
+2026-07-14 21:14:59 [INFO] mission: ==================================================
+INFO:mission:==================================================
+2026-07-14 21:14:59 [INFO] navigation: Uçuş modu değiştiriliyor: RTL
+INFO:navigation:Uçuş modu değiştiriliyor: RTL
+2026-07-14 21:14:59 [INFO] navigation: ✓ Uçuş modu: RTL
+INFO:navigation:✓ Uçuş modu: RTL
+2026-07-14 21:14:59 [INFO] mission: RTL modu aktif, eve dönülüyor...
+INFO:mission:RTL modu aktif, eve dönülüyor...
+2026-07-14 21:15:00 [INFO] mission:   Eve mesafe: 14519445.9m, İrtifa: 0.0m
+INFO:mission:  Eve mesafe: 14519445.9m, İrtifa: 0.0m
+2026-07-14 21:15:00 [INFO] mission:   Eve mesafe: 14519445.9m, İrtifa: 0.0m
+INFO:mission:  Eve mesafe: 14519445.9m, İrtifa: 0.0m
+2026-07-14 21:15:10 [INFO] mission:   Eve mesafe: 14519445.9m, İrtifa: 0.0m
+INFO:mission:  Eve mesafe: 14519445.9m, İrtifa: 0.0m
+2026-07-14 21:15:10 [INFO] mission:   Eve mesafe: 14519445.9m, İrtifa: 0.0m
+INFO:mission:  Eve mesafe: 14519445.9m, İrtifa: 0.0m
+2026-07-14 21:15:20 [INFO] mission:   Eve mesafe: 14519445.9m, İrtifa: 0.0m
+INFO:mission:  Eve mesafe: 14519445.9m, İrtifa: 0.0m
+2026-07-14 21:15:20 [INFO] mission:   Eve mesafe: 14519445.9m, İrtifa: 0.0m
+INFO:mission:  Eve mesafe: 14519445.9m, İrtifa: 0.0m
+2026-07-14 21:15:30 [INFO] mission:   Eve mesafe: 14519445.9m, İrtifa: -0.0m
+INFO:mission:  Eve mesafe: 14519445.9m, İrtifa: -0.0m
+2026-07-14 21:15:30 [INFO] mission:   Eve mesafe: 14519445.9m, İrtifa: -0.0m
+INFO:mission:  Eve mesafe: 14519445.9m, İrtifa: -0.0m

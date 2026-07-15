@@ -99,7 +99,7 @@ MIN_CONFIDENCE_SCORE = 60
 #search süresi
 SEARCH_DURATION_SECONDS = 999999.0
 DETECTION_SAMPLE_INTERVAL = 0.20
-MINIMUM_DETECTION_SAMPLES = 15
+MINIMUM_DETECTION_SAMPLES = 1
 
 # =============================================================================
 # SERVO / FAYDALI YÜK BIRAKMA
