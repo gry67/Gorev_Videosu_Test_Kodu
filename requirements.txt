@@ -1,7 +1,8 @@
 # Teknofest İHA Yarışması - Python Bağımlılıkları
 # pip install -r requirements.txt
 
-dronekit==2.9.2
+dronekit
 pymavlink>=2.4.40
 opencv-python>=4.8.0
 numpy>=1.24.0
+future
